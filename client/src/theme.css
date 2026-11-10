@@ -1,0 +1,72 @@
+@import "tailwindcss";
+@import "tailwindcss-safe-area";
+
+@theme {
+  --text-xs: 12px;
+  --text-xs--line-height: 16px;
+  --text-sm: 14px;
+  --text-sm--line-height: 20px;
+  --text-base: 16px;
+  --text-base--line-height: 24px;
+  --text-lg: 18px;
+  --text-lg--line-height: 28px;
+  --text-xl: 20px;
+  --text-xl--line-height: 28px;
+  --text-2xl: 24px;
+  --text-2xl--line-height: 32px;
+  --text-3xl: 30px;
+  --text-3xl--line-height: 36px;
+  --text-4xl: 36px;
+  --text-4xl--line-height: 40px;
+  --font-serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+}
+
+:root {
+  color-scheme: light dark;
+  --bg: #faf7f1;
+  --surface: #ffffff;
+  --surface-alt: #f3eee5;
+  --text: #1c1917;
+  --dim: #78716c;
+  --border: #e7e0d6;
+  --accent: #c2410c;
+  --accent-soft: #fdefe8;
+  --accent-text: #9a3412;
+  --sage: #3f6212;
+  --radius: 14px;
+  --space-surface: var(--surface);
+  --space-surface-alt: var(--surface-alt);
+  --space-muted: var(--dim);
+  --space-border: var(--border);
+  --space-accent: var(--accent);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #16130f;
+    --surface: #221e19;
+    --surface-alt: #2b261e;
+    --text: #f5f0e8;
+    --dim: #a8a29e;
+    --border: #3d362c;
+    --accent: #fb923c;
+    --accent-soft: #3a2417;
+    --accent-text: #fdba74;
+    --sage: #a3e635;
+  }
+}
+
+@keyframes thinking-dot {
+  0%, 60%, 100% { opacity: 0.25; transform: translateY(0); }
+  30% { opacity: 1; transform: translateY(-3px); }
+}
+
+.thinking-dot {
+  animation: thinking-dot 1.2s ease-in-out infinite;
+}
+.thinking-dot:nth-child(2) { animation-delay: 0.15s; }
+.thinking-dot:nth-child(3) { animation-delay: 0.3s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .thinking-dot { animation: none; opacity: 0.6; }
+}
