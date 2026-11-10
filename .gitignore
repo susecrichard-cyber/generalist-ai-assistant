@@ -1,0 +1,6 @@
+node_modules/
+dist/
+dist-cvm/
+.space-build/
+app.db
+*.tsbuildinfo*
